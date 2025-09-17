@@ -24,6 +24,11 @@ public class DeleteContactTests extends AppiumConfig {
                 .isListSizeLessOnOne();
     }
 
-
+@Test
+    public void deleteAllContactsSuccess(){
+        new ContactListScreen(driver)
+                .removeAllContacts()
+                .isNoContactsHere();
+}
 
 }
